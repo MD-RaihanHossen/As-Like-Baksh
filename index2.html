@@ -1,72 +1,115 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Transfar moneey</title>
-        <link rel="stylesheet" href="style/style.css">
-    </head>
-    <body>
-        <header> 
+<!DOCTYPE html>
+<html lang="en">
 
-        </header>
-        <main>
-            <section>
-                <article>
-                    <div class="container" id="container">
-                        
-                        
-                        <div class="sub-container" id="sub-container">  
-                           
-                          <from>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfar moneey</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <article>
+                <div class="container" id="container">
+
+
+                    <div class="sub-container" id="sub-container">
+                        <from>
                             <h1 class="bkash">Amount : <span id="Main-Balance">10000</span> </h1>
 
-                          <div class="hr-container">
-                            <hr style="margin-bottom: 5px;">
-                            <div class="btn-containers">
-                                <div class="btn-subcontainer">
-                                    <button class="btn-style">Withdrow</button>
-                                    <button class="btn-style">Diposit</button>
-                                    <button class="btn-style">History</button>
+                            <div class="hr-container">
+                                <hr style="margin-bottom: 5px;">
+                                <div class="btn-containers">
+                                    <div class="btn-subcontainer">
+                                        <button class="btn-style">Diposit</button>
+                                        <button class="btn-style">Withdrow</button>
+                                        <button class="btn-style">History</button>
+                                    </div>
                                 </div>
+                                <hr style="margin-bottom: 40px;">
                             </div>
-                            <hr style="margin-bottom: 40px;">
-                          </div>
-                            <table>
-                                <h1 style="text-align: center; font-size: 30px; margin: 5px;">Diposit</h1>
-                                <tr>
-                                    <td>
-                                        <label for="Email" class="text-Bolder">Moneey : </label>
-                                    </td>
-                                    <td>
-                                        <input type="text" name="" id="Email" placeholder="please type email" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="text-Bolder" for="password" >Password : </label>
-                                    </td>
-                                    <td>
-                                        <input type="password" name="" id="password" placeholder="please type password" required>
-                                    </td>
-                                </tr>
-                            </table>
-                           
-                            <button id="logIn-btn" class="text-Bolder btn-style" onclick="clickFunctionForBtn('Click Here')">
-                                Click Here
-                            </button>
-                          </from>
-                        </div>
-    
+                            <div id="moneey-in-out-history">
+                                <div id="diposite-main-Container" class="">
+                                    <table>
+                                        <h1 style="text-align: center; font-size: 30px; margin: 5px;">Diposit</h1>
+                                        <tr>
+                                            <td>
+                                                <label for="Email" class="text-Bolder">Moneey : </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="" id="Email" placeholder="please type email"
+                                                    required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="text-Bolder" for="password">Password : </label>
+                                            </td>
+                                            <td>
+                                                <input type="password" name="" id="password"
+                                                    placeholder="please type password" required>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <button id="logIn-btn" class="text-Bolder btn-style"
+                                        onclick="clickFunctionForBtn('Click Here')">
+                                        Click Here
+                                    </button>
+                                </div>
+                                <!-- Widthdrow area here -->
+                                <section id="withdow-main-Container" class="hide-container">
+
+                                    <table>
+                                        <h1 style="text-align: center; font-size: 30px; margin: 5px;">Withdrow</h1>
+                                        <tr>
+                                            <td>
+                                                <label for="Email" class="text-Bolder">Moneey : </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="" id="Email-withdrow" placeholder="please type email"
+                                                    required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="text-Bolder" for="password">Password : </label>
+                                            </td>
+                                            <td>
+                                                <input type="password" name="" id="password-withdrow"
+                                                    placeholder="please type password" required>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <button id="logIn-btn" class="text-Bolder btn-style"
+                                        onclick="clickFunctionForBtn('Withdrow')">
+                                        Click Here
+                                    </button>
+
+                                </section>
+
+                            </div>
+                        </from>
                     </div>
-                </article>
-            </section>
-        </main>
-        <footer>
 
-        </footer>
+                </div>
+            </article>
+        </section>
 
-        <script src="js/index.js"></script>
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="js/index.js"></script>
     <script src="js/getInputValue.js"></script>
-    </body>
-    </html>
+</body>
+
+</html>

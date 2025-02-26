@@ -43,3 +43,7 @@
 .hr-container{
     margin-top: 50px;
 }
+
+.hide-container{
+    display: none;
+}
