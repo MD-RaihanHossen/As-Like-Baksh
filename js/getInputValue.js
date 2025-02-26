@@ -29,14 +29,36 @@ const clickFunctionForBtn = (id) => {
     // get inner text form main balance 
     const mainBalance = getInnerTextFromText('Main-Balance');
     if (id == 'Click Here' || id == 'Withdrow') {
-        if (parseInt(getValueFromPassword) || parseInt(passwordWithdrow) === 1234 ) {
+        if (parseInt(getValueFromPassword) || parseInt(passwordWithdrow) === 1234) {
             if (id == 'Click Here') {
                 const totalBalance = parseFloat(getValueFromMoneey) + mainBalance;
                 document.getElementById('Main-Balance').innerText = totalBalance;
+
+                // for history this code like get container than push newElement;
+                const getHistorySubContainer = document.getElementById('history-recode-subContainer');
+                const getNewElementCreate = document.createElement('p');
+                createStyleHere(getNewElementCreate, 'diposite');
+
+                getNewElementCreate.innerText = `Diposit Moneey : ${getValueFromMoneey} and Total Balance : ${totalBalance}`;
+                getHistorySubContainer.appendChild(getNewElementCreate);
+
             }
-            else if(id == 'Withdrow') {
+            else if (id == 'Withdrow') {
                 const totalBalances = mainBalance - parseFloat(emailWithdrow);
                 document.getElementById('Main-Balance').innerText = totalBalances;
+
+                // for history this code like get container than push newElement;
+                const getHistorySubContainer = document.getElementById('history-recode-subContainer');
+                const getNewElementCreate = document.createElement('p')
+                // here inner html adding 
+                getNewElementCreate.innerHTML = `
+                    
+                    Withdrow Moneey : ${emailWithdrow} and Total Balance : ${totalBalances}
+            
+                `
+                getHistorySubContainer.appendChild(getNewElementCreate);
+                createStyleHere(getNewElementCreate, 'withdrow')
+
             }
 
             //  clear input all filde
@@ -56,6 +78,9 @@ const clickFunctionForBtn = (id) => {
     }
 
 };
+
+// there is a history trasform all recodes ;
+
 
 
 
@@ -77,6 +102,8 @@ const hidefunctions = (id) => {
 };
 
 
+
+
 // i will write function daligation li deluyar vai;
 document.getElementsByClassName('btn-subcontainer')[0].addEventListener('click', (event) => {
     if (event.target.innerText == 'Withdrow') {
@@ -86,6 +113,9 @@ document.getElementsByClassName('btn-subcontainer')[0].addEventListener('click',
         hidefunctions('diposite-main-Container')
     }
     else if (event.target.innerText == 'History') {
+        const getHistoryContainer = document.getElementById('history-recode-container')
+        getHistoryContainer.classList.remove('hide-container');
+        // const createNewElement = document.createElement('p')
 
     }
     else {
@@ -94,4 +124,20 @@ document.getElementsByClassName('btn-subcontainer')[0].addEventListener('click',
 });
 
 
-// there hava change btn options end here 
+// styel by javascript common styel here;
+const createStyleHere = (id, identity) => {
+   if(identity == 'diposite'){
+    id.style.color = 'white';
+    id.style.borderRadius = '8px';
+    id.style.backgroundColor = 'green';
+    id.style.padding = '10px';
+   }
+   else{
+    id.style.backgroundColor = 'red';
+    id.style.color = 'white';
+    id.style.borderRadius = '8px';
+    id.style.padding = '10px';
+   }
+
+};
+

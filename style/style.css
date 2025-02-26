@@ -47,3 +47,9 @@
 .hide-container{
     display: none;
 }
+
+.those-Container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
