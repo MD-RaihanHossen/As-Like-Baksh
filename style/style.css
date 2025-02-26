@@ -32,6 +32,14 @@
     border-radius: 10px;
     background-color: gray;
 }
-.btn-style:hover{
-    
+
+/* bnt containers here */
+.btn-subcontainer{
+    display: grid;
+    grid-template-rows: repeat(1fr, 3);
+    gap: 5px;
+
+}
+.hr-container{
+    margin-top: 50px;
 }
