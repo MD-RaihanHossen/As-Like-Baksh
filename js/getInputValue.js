@@ -55,9 +55,9 @@ const clickFunctionForBtn = (id) => {
                     
                     Withdrow Moneey : ${emailWithdrow} and Total Balance : ${totalBalances}
             
-                `
+                `;
                 getHistorySubContainer.appendChild(getNewElementCreate);
-                createStyleHere(getNewElementCreate, 'withdrow')
+                createStyleHere(getNewElementCreate, 'withdrow');
 
             }
 
@@ -115,8 +115,6 @@ document.getElementsByClassName('btn-subcontainer')[0].addEventListener('click',
     else if (event.target.innerText == 'History') {
         const getHistoryContainer = document.getElementById('history-recode-container')
         getHistoryContainer.classList.remove('hide-container');
-        // const createNewElement = document.createElement('p')
-
     }
     else {
         alert('please click Buttton')

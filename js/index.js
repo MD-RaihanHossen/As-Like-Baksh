@@ -8,7 +8,4 @@ document.getElementById('logIn-btn').addEventListener('click', () => {
    }
 
     
-});
-
-
-// 
+}); 
