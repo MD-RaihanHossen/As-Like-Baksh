@@ -6,12 +6,17 @@ const getValueFromInput = (id) => {
 };
 
 
+
+
 // get inner-text form text 
 const getInnerTextFromText = (id) => {
     const getElements = document.getElementById(id).innerText;
+   // console.log(getElements)
     const getInnerTextNm = parseFloat(getElements)
     return getInnerTextNm;
 };
+
+
 
 
 
@@ -79,17 +84,7 @@ const clickFunctionForBtn = (id) => {
 
 };
 
-// there is a history trasform all recodes ;
 
-
-
-
-// there is a function end for muinus moneey on main balance 
-
-
-
-
-// there hava change btn options start here 
 
 // common function for hide sub containers here
 const hidefunctions = (id) => {
@@ -103,39 +98,41 @@ const hidefunctions = (id) => {
 
 
 
-
 // i will write function daligation li deluyar vai;
-document.getElementsByClassName('btn-subcontainer')[0].addEventListener('click', (event) => {
-    if (event.target.innerText == 'Withdrow') {
-        hidefunctions('withdow-main-Container')
-    }
-    else if (event.target.innerText == 'Diposit') {
-        hidefunctions('diposite-main-Container')
-    }
-    else if (event.target.innerText == 'History') {
-        const getHistoryContainer = document.getElementById('history-recode-container')
-        getHistoryContainer.classList.remove('hide-container');
-    }
-    else {
-        alert('please click Buttton')
-    }
-});
+const i = document.getElementsByClassName('btn-subcontainer')[0];
+if(i){
+    i.addEventListener('click', (event) => {
+        if (event.target.innerText == 'Withdrow') {
+            hidefunctions('withdow-main-Container')
+        }
+        else if (event.target.innerText == 'Diposit') {
+            hidefunctions('diposite-main-Container')
+        }
+        else if (event.target.innerText == 'History') {
+            const getHistoryContainer = document.getElementById('history-recode-container')
+            getHistoryContainer.classList.remove('hide-container');
+        }
+        else {
+            alert('please click Buttton')
+        }
+    });
+} 
 
 
 // styel by javascript common styel here;
 const createStyleHere = (id, identity) => {
-   if(identity == 'diposite'){
-    id.style.color = 'white';
-    id.style.borderRadius = '8px';
-    id.style.backgroundColor = 'green';
-    id.style.padding = '10px';
-   }
-   else{
-    id.style.backgroundColor = 'red';
-    id.style.color = 'white';
-    id.style.borderRadius = '8px';
-    id.style.padding = '10px';
-   }
+    if (identity == 'diposite') {
+        id.style.color = 'white';
+        id.style.borderRadius = '8px';
+        id.style.backgroundColor = 'green';
+        id.style.padding = '10px';
+    }
+    else {
+        id.style.backgroundColor = 'red';
+        id.style.color = 'white';
+        id.style.borderRadius = '8px';
+        id.style.padding = '10px';
+    }
 
 };
 
